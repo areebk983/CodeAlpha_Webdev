@@ -1,0 +1,33 @@
+.blog-img {
+  height: 475px;
+  overflow: hidden;
+}
+
+.blog-img img {
+  width: 100%;
+}
+
+.blogpost-content {
+  text-align: center;
+}
+.blogpost-content p {
+  font-weight: bold;
+  color: brown;
+  font-size: 100%;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.morepost {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  /* margin: 0px 15px; */
+}
+.row {
+  flex-direction: column;
+}

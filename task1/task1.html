@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Temperature Converter</title>
+   
+       
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+    <div class="container">
+     <div class="picture">
+        <img src="https://media.istockphoto.com/id/868098786/photo/thermometer-on-snow-shows-low-temperatures-zero-low-temperatures-in-degrees-celsius-and.jpg?s=612x612&w=0&k=20&c=jOZH4RSlX29thO6GNlvTUlYKUo_DK4xVxvXUTK7Jw5s=" alt="">
+     </div>
+      <div class="right-content">
+        <h2>Temperature Converter</h2>
+        <select id="fromScale">
+            <option value="celsius">Celsius</option>
+            <option value="fahrenheit">Fahrenheit</option>
+            <option value="kelvin">Kelvin</option>
+        </select>
+        <input type="number" id="inputTemp" placeholder="Enter temperature">
+        <select id="toScale">
+            <option value="celsius">Celsius</option>
+            <option value="fahrenheit">Fahrenheit</option>
+            <option value="kelvin">Kelvin</option>
+        </select>
+        <button onclick="convertTemperature()">Convert</button>
+        <p id="result"></p>
+      </div>
+       
+    </div>
+
+    <script>
+        function convertTemperature() {
+            const fromScale = document.getElementById("fromScale").value;
+            const toScale = document.getElementById("toScale").value;
+            const inputTemp = parseFloat(document.getElementById("inputTemp").value);
+
+            let result;
+            
+            if (fromScale === "celsius" && toScale === "fahrenheit") {
+                result = (inputTemp * 9/5) + 32;
+            } else if (fromScale === "celsius" && toScale === "kelvin") {
+                result = inputTemp + 273.15;
+            } else if (fromScale === "fahrenheit" && toScale === "celsius") {
+                result = (inputTemp - 32) * 5/9;
+            } else if (fromScale === "fahrenheit" && toScale === "kelvin") {
+                result = (inputTemp - 32) * 5/9 + 273.15;
+            } else if (fromScale === "kelvin" && toScale === "celsius") {
+                result = inputTemp - 273.15;
+            } else if (fromScale === "kelvin" && toScale === "fahrenheit") {
+                result = (inputTemp - 273.15) * 9/5 + 32;
+            } else {
+                result = inputTemp; // Same scale
+            }
+
+            document.getElementById("result").textContent = `${inputTemp} ${fromScale} is ${result.toFixed(2)} ${toScale}`;
+        }
+    </script>
+</body>
+</html>

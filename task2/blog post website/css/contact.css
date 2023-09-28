@@ -1,0 +1,35 @@
+.contatc-content {
+  padding: 56px;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  position: relative;
+  margin-top: 32px;
+  height: 100vh;
+}
+
+.contact-content::after {
+  content: "";
+  background-color: aquamarine;
+  position: absolute;
+  height: inherit;
+  width: 100%;
+  opacity: 0.15;
+}
+
+.contact-form input,
+textarea {
+  padding: 15px 25px;
+  margin: 10px 0px;
+  width: 34vw;
+  border-radius: 5px;
+  border: 2px solid brown;
+}
+
+.contact::after {
+  content: "";
+  background-image: url("../images/2img.webp");
+  width: 100%;
+  height: inherit;
+  position: absolute;
+  opacity: 0.15;
+}
