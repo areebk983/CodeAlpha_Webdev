@@ -1,11 +1,14 @@
 body {
   font-family: Arial, sans-serif;
   text-align: center;
+  background-color: aquamarine;
 }
 .container {
   margin: 100px auto;
   width: 300px;
   display: flex;
+  justify-content: center;
+  text-align: center;
 }
 select,
 input {
@@ -14,9 +17,6 @@ input {
   margin-bottom: 10px;
 }
 
-.picture img {
-  width: 419%;
-}
 .right-content {
   display: flex;
   justify-content: center;
